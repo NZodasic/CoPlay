@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Đau Lưng</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+        <span>Hand Gesture Control</span>
+      </h1>
+    </header>
+
+    <main>
+      <section>
+        <h2></h2>
+        <label for="robotSelect">Robot profile: </label>
+        <select id="robotSelect">
+          <option value="RPI_BW_001">RPI_BW_001</option>
+        </select>
+        <button id="pairButton">Pair</button>
+        <br />
+        <label style="color: brown;" for="">Robot name: </label>
+        <input type="text" id="robotNameInput" value="" placeholder="" disabled />
+      </section>
+
+      <section>
+        <h2>Information</h2>
+        <div>
+          <label for="">SSID:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+          <input type="text" id="ssidInput" value="" placeholder="" />
+        </div>
+        <div>
+          <label for="">Password: &nbsp;</label>
+          <input type="password" id="passwordInput" value="" placeholder="" />
+        </div>
+        <div>
+          <label for="">Host: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+          <input type="text" id="hostInput" value="" placeholder="" />
+        </div>
+        <div>
+          <label for="">Port: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</label>
+          <input type="number" id="portInput" value="" placeholder="" />
+        </div>
+        <div>
+          <label for="">Channel Name: &nbsp; &nbsp; &nbsp; &nbsp;</label>
+          <input type="text" id="channelInput" placeholder="" />
+          <button id="sendMediaServerInfoButton">Send</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Robot cam &nbsp;  &nbsp;  &nbsp; &nbsp;  Hand gesture</h2>
+        <div class="box">
+          <video id="videoElement" autoplay muted></video>
+          <video id="canvasElement"></video>
+        </div>
+        <button id="openWebSocketButton">Open</button>
+        <button id="stopButton">Stop</button>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
